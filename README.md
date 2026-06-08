@@ -162,6 +162,10 @@ Gửi API
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8fb6e200-1757-4471-ab79-adaae8294ef0" />
 
+Nhấn nút Run ▶ Trong Android Studio
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ee0de941-0515-408f-b15e-4f0f28349566" />
+
 Chạy app trên điện thoại
 
 <img width="720" height="1520" alt="trang lan1" src="https://github.com/user-attachments/assets/04b6902b-16eb-452d-9b59-8d6f3a38126c" />
