@@ -107,6 +107,70 @@ Setup SDK: chọn "Eclipse Temurin 17.0.18"
 
 <img width="840" height="354" alt="image" src="https://github.com/user-attachments/assets/31424424-2409-484b-92e5-433b4e0275b5" />
 
+**1. Build project cho cho Android Studio hết lỗi trước**
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ce9c187-8e59-4278-b2ca-62e99bbb9177" />
+
+<img width="1918" height="1080" alt="image" src="https://github.com/user-attachments/assets/189c4fb4-069c-4998-bfaf-73f1c7364f85" />
+
+**2. Code giao diện**
+
+TextView
+
+Button mở màn hình giải toán
+
+Button mở WebView
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9420260a-ee59-4118-b0e6-b7e487737e67" />
+
+Giao diện Preview
+
+
+**3. Tạo Activity**
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/70e345c7-377e-4f6e-8f1a-8c20afba8bea" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/559baef6-4a40-431a-a428-54db77674a80" />
+
+Cây thư mục có:
+
+1.MainActivity
+
+2.ToanActivity
+
+3.WebActivity
+
+<img width="1920" height="1072" alt="image" src="https://github.com/user-attachments/assets/fded4552-4e6d-4408-9337-1a81889366f2" />
+
+AndroidManifest
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0b3995cb-d30d-482a-8486-daf3560d5aa4" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/66b4aeb2-be7f-45e7-831c-9f34df756f8e" />
+
+Code Java
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/350dddf3-039f-4c89-a360-ac52315ad2c7" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bbe8f95f-56b0-40b4-92dd-d28ad930dd0d" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e3ff156-e0d6-4596-9f03-420b5ced5b65" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9985e9f7-8425-4f44-8312-4dfe09af785d" />
+
+Gửi API
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8fb6e200-1757-4471-ab79-adaae8294ef0" />
+
+Chạy app trên điện thoại
+
+<img width="720" height="1520" alt="trang lan1" src="https://github.com/user-attachments/assets/04b6902b-16eb-452d-9b59-8d6f3a38126c" />
+
+<img width="720" height="1520" alt="trang lan2" src="https://github.com/user-attachments/assets/c70d2de9-3cf1-4dce-b7f2-3b5f3ce6461b" />
+
+<img width="720" height="1520" alt="trang lan2 1" src="https://github.com/user-attachments/assets/5321b332-bd1b-4b08-9cf9-8720fb2f5811" />
+
+<img width="720" height="1520" alt="trang lan3" src="https://github.com/user-attachments/assets/8d6d3e91-22a9-4093-9ed8-7d7f524ec965" />
 
 ==> tạo app1 sử dụng cơ chế Dữ liệu chuẩn bị trước trong Assets
          format dữ liệu: tuỳ ý, nội dung tuỳ ý
