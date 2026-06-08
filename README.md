@@ -101,6 +101,47 @@ thay url bất kỳ hỗ trợ điện thoại
      lợi ích của việc app có sẵn các files (offline cũng có)?
      ứng dụng: app hướng dẫn việc X
 
+==> tạo app1 sử dụng cơ chế Dữ liệu chuẩn bị trước trong Assets
+         format dữ liệu: tuỳ ý, nội dung tuỳ ý
+         công cụ để hiển thị dữ liệu: tuỳ ý
+         có cần phải tiền xử lý trước khi hiển thị ko: tuỳ ý.
+         SV TỰ ĐẶT RA VẤN ĐỀ => TỰ GIẢI QUYẾT VẤN ĐỀ
+         MÔ TẢ ĐƯỢC DỮ LIỆU CÓ ĐẶC THÙ GÌ
+                    DÙNG THUẬT TOÁN NÀO ĐỂ XỬ LÝ DỮ LIỆU (NẾU CẦN)
+                    DÙNG ĐỐI TƯỢNG NÀO ĐỂ HIỂN THỊ DỮ LIỆU.
+                    (ĐỘ SÁNG TẠO LÀ KO GIỚI HẠN)
+
+<img width="1920" height="1061" alt="image" src="https://github.com/user-attachments/assets/1cafb4f3-fc61-4d64-8b33-ee57bd74876d" />
+
+<img width="1912" height="1079" alt="image" src="https://github.com/user-attachments/assets/7aaa2b85-2af0-44f0-a0db-8a75fb401699" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4b05f3c9-a2e5-410f-9ea6-5d90b93d0567" />
+
+<img width="1919" height="1080" alt="image" src="https://github.com/user-attachments/assets/302c8777-9ca2-45bd-a185-53bf0280a265" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9dd69aba-f0ba-4a80-b098-ed17150977f6" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93ddf25b-0ff9-4c67-9c0c-61847b6842dd" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b090eb68-5caf-4e31-94db-70e8a9e563e5" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8bb72493-17a2-4a00-a745-c2866fb6be58" />
+
+<img width="1915" height="1066" alt="image" src="https://github.com/user-attachments/assets/e5d57115-6ab1-4b12-8e96-340ce3e81b85" />
+
+
+------------------------
+APP2 (android studio):  tạo app tương đương với Mit App inventor
+  app có 3 activity
+  + activity1: about: about+nút gọi sang 2 activity còn lại
+  + activity2: giải toán đơn giản (tuỳ ý). mỗi khi giải xong bài toán: gọi api tại https://k58kmt.tdh.io.vn/api
+    để gửi bài toán lên đó
+    {app_by:mã số sv, input: {a:1,b:2,c:3,name:"hello tắc kè"},output:{ketluan:"vô nghiệm", abc:"xyz", nghiem:3.14}}
+    nhận lại json: {ok:1, stt:1234}
+  + activity3: 
+    dùng web-view để truy cập từ 
+    1 trang web https://k58kmt.tdh.io.vn?masv=mã sv của bạn
+
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c9f314ef-5022-4018-9304-09c7697dd03c" />
 
 Setup SDK: chọn "Eclipse Temurin 17.0.18"
@@ -122,9 +163,6 @@ Button mở màn hình giải toán
 Button mở WebView
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9420260a-ee59-4118-b0e6-b7e487737e67" />
-
-Giao diện Preview
-
 
 **3. Tạo Activity**
 
@@ -176,26 +214,10 @@ Chạy app trên điện thoại
 
 <img width="720" height="1520" alt="trang lan3" src="https://github.com/user-attachments/assets/8d6d3e91-22a9-4093-9ed8-7d7f524ec965" />
 
-==> tạo app1 sử dụng cơ chế Dữ liệu chuẩn bị trước trong Assets
-         format dữ liệu: tuỳ ý, nội dung tuỳ ý
-         công cụ để hiển thị dữ liệu: tuỳ ý
-         có cần phải tiền xử lý trước khi hiển thị ko: tuỳ ý.
-         SV TỰ ĐẶT RA VẤN ĐỀ => TỰ GIẢI QUYẾT VẤN ĐỀ
-         MÔ TẢ ĐƯỢC DỮ LIỆU CÓ ĐẶC THÙ GÌ
-                    DÙNG THUẬT TOÁN NÀO ĐỂ XỬ LÝ DỮ LIỆU (NẾU CẦN)
-                    DÙNG ĐỐI TƯỢNG NÀO ĐỂ HIỂN THỊ DỮ LIỆU.
-                    (ĐỘ SÁNG TẠO LÀ KO GIỚI HẠN)
-------------------------
-APP2 (android studio):  tạo app tương đương với Mit App inventor
-  app có 3 activity
-  + activity1: about: about+nút gọi sang 2 activity còn lại
-  + activity2: giải toán đơn giản (tuỳ ý). mỗi khi giải xong bài toán: gọi api tại https://k58kmt.tdh.io.vn/api
-    để gửi bài toán lên đó
-    {app_by:mã số sv, input: {a:1,b:2,c:3,name:"hello tắc kè"},output:{ketluan:"vô nghiệm", abc:"xyz", nghiem:3.14}}
-    nhận lại json: {ok:1, stt:1234}
-  + activity3: 
-    dùng web-view để truy cập từ 
-    1 trang web https://k58kmt.tdh.io.vn?masv=mã sv của bạn
+TEST API
+
+<img width="720" height="1520" alt="t1" src="https://github.com/user-attachments/assets/6f04b0d4-40f0-491e-95bf-df73483734be" />
+
 =======================
     vết để lại: mô tả quá trình làm bài tập ra file .md => upload github
     kèm hình ảnh minh hoạ quá trình làm.
