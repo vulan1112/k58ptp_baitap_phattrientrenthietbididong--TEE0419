@@ -54,3 +54,22 @@ Lập trình logic (Blocks)
 
 <img width="975" height="548" alt="image" src="https://github.com/user-attachments/assets/c7aad646-b6bb-4ea2-b27a-b06b05206107" />
 
+Kết Quả cuối sau khi thêm "quay lại"
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8ee3be2d-9d8a-41c8-993a-6ca6238fb502" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90ab0ef3-6a38-447d-acf5-24fa11e98863" />
+
+<img width="1184" height="2560" alt="image" src="https://github.com/user-attachments/assets/78df8bd4-4a96-424e-bd05-be28f9af43e8" />
+
+<img width="1184" height="2560" alt="image" src="https://github.com/user-attachments/assets/f1a08590-b788-4884-aa54-37ec2efcbb80" />
+
+<img width="1184" height="2560" alt="image" src="https://github.com/user-attachments/assets/73342a5d-52e3-478c-a99f-edc2f1fcfba7" />
+
+thay url bất kỳ hỗ trợ điện thoại
+
+<img width="1812" height="1080" alt="image" src="https://github.com/user-attachments/assets/6b393326-6e2f-4e54-8559-fff0f89a0529" />
+
+<img width="1184" height="2560" alt="image" src="https://github.com/user-attachments/assets/149a7f84-1bde-4c66-a49c-469c56ab096e" />
+
+
