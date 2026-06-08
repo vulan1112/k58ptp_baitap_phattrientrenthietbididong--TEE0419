@@ -129,6 +129,13 @@ thay url bất kỳ hỗ trợ điện thoại
 
 <img width="1915" height="1066" alt="image" src="https://github.com/user-attachments/assets/e5d57115-6ab1-4b12-8e96-340ce3e81b85" />
 
+<img width="1912" height="1073" alt="image" src="https://github.com/user-attachments/assets/361ea7fa-db66-416f-aa3e-14f2aeb7ccd7" />
+
+<img width="720" height="1520" alt="l5" src="https://github.com/user-attachments/assets/ebb69dbb-8370-4f22-83be-55723280a9d0" />
+
+<img width="720" height="1520" alt="l2" src="https://github.com/user-attachments/assets/45dfaff9-4e15-4aee-b460-d4e0b7c81ae7" />
+
+<img width="720" height="1520" alt="l4" src="https://github.com/user-attachments/assets/0315c0b0-7a95-407c-b837-be1dc980bc86" />
 
 ------------------------
 APP2 (android studio):  tạo app tương đương với Mit App inventor
@@ -217,6 +224,10 @@ Chạy app trên điện thoại
 TEST API
 
 <img width="720" height="1520" alt="t1" src="https://github.com/user-attachments/assets/6f04b0d4-40f0-491e-95bf-df73483734be" />
+
+Minh chứng app trên điện thoại android
+
+<img width="720" height="1520" alt="l1" src="https://github.com/user-attachments/assets/8dc58f52-6993-4f3f-9ee3-30b01a3ca90b" />
 
 =======================
     vết để lại: mô tả quá trình làm bài tập ra file .md => upload github
