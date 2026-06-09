@@ -71,39 +71,382 @@ thay url bất kỳ hỗ trợ điện thoại
 <img width="1812" height="1080" alt="image" src="https://github.com/user-attachments/assets/6b393326-6e2f-4e54-8559-fff0f89a0529" />
 
 <img width="1184" height="2560" alt="image" src="https://github.com/user-attachments/assets/149a7f84-1bde-4c66-a49c-469c56ab096e" />
-2. Viết app sử dụng Android Studio
-   + Android manifest.xml  => mô tả gì? app cần quyền để do-st: khai báo ntn? để làm gì?
-   + vòng đời của 1 ứng dụng android.
-     code tự sinh sau khi tạo 1 project: có sẵn hàm onCreate: tại sao???
-   + Code: java language. 
-     app cần check xem có quyền để do-st? : code ntn? ý nghĩa?
-     giao diện: (res/layout) mô tả bằng file XML + UI Design review
-        + thuộc tính text, hoặc các thuộc tính khác: giá trị hardcode => lưu vào nới khác, tham chiếu tới nó:
-          cú pháp của việc tham chiếu là gì?
-          ưu điểm của việc tham chiếu này?
-          OS hỗ trợ auto việc lấy giá trị tham chiếu theo LOCATION, LANGUAGE, THEME
-          việc hỗ trợ auto này giúp app làm được điều gì?	
-        + đối tượng chứa: gộp các đối tượng con lại: cùng 1 quy luật sắp xếp để hiển thị 
-          các đối tượng con nằm kề nhau theo chiều dọc | hoặc ngang, gravity
-     code tương tác với layout: vd hiển thị text
-          mong muốn text hiển thị phù hợp với thiết lập LOCATION, LANGUAGE, THEME của người dùng
-          thì làm ntn? (tránh hardcode)
-     event (sự kiện) người dùng tác động vào app: CLICK vào button, click vào text,...
-          với 1 sự kiện nào đó, muốn chạy 1 đoạn code để do-st
-          thì LAYTOUT cần làm gì?
-              CODE viết như nào (2 cách)
----------------------------
-   trong app có các thư mục đặc biệt: Assets
-     khi sử dụng Window Explorer để copy các files + folder vào trong Assets
-     thì khi compiler: mọi file này đều đi theo app, nằm trong app
-     trong app có thể truy cập được đến các file này
-     cú pháp truy cập vào là gì?
-     lợi ích của việc app có sẵn các files (offline cũng có)?
-     ứng dụng: app hướng dẫn việc X
 
+# 2. Viết app sử dụng Android Studio
+## 1. AndroidManifest.xml dùng để làm gì?
+  
+`AndroidManifest.xml` là file cấu hình quan trọng của ứng dụng Android. File này dùng để khai báo thông tin chính của ứng dụng như tên app, các Activity, quyền truy cập, Activity chạy đầu tiên và một số cấu hình hệ thống.
+
+Ví dụ:
+<activity android:name=".MainActivity" />
+<activity android:name=".ToanActivity" />
+<activity android:name=".WebActivity" />
+
+2. App cần quyền để làm gì? Khai báo quyền như thế nào?
+
+Ứng dụng cần quyền để sử dụng một số chức năng của thiết bị hoặc hệ thống. Ví dụ app cần truy cập Internet để mở WebView hoặc gửi API thì phải khai báo quyền Internet.
+
+Cách khai báo:
+
+<uses-permission android:name="android.permission.INTERNET" />
+
+Dòng này được đặt trong thẻ <manifest> và nằm ngoài thẻ <application>.
+3. Quyền INTERNET dùng để làm gì?
+
+Quyền INTERNET cho phép ứng dụng truy cập mạng. Trong bài này quyền Internet dùng để:
+
+Mở website bằng WebView.
+Gửi dữ liệu bài toán lên API.
+Nhận phản hồi từ server.
+4. Vòng đời của một Activity Android gồm những hàm nào?
+
+Vòng đời của một Activity Android gồm các hàm chính:
+
+onCreate()
+onStart()
+onResume()
+onPause()
+onStop()
+onDestroy()
+
+Trong đó:
+
+onCreate() được gọi khi Activity được tạo lần đầu.
+onStart() được gọi khi Activity bắt đầu hiển thị.
+onResume() được gọi khi Activity sẵn sàng tương tác.
+onPause() được gọi khi Activity tạm dừng.
+onStop() được gọi khi Activity không còn hiển thị.
+onDestroy() được gọi khi Activity bị đóng hoặc bị hủy.
+5. Vì sao khi tạo project Android có sẵn hàm onCreate?
+
+Khi tạo project Android, Android Studio tự sinh hàm onCreate() vì đây là hàm khởi tạo đầu tiên của Activity. Hàm này dùng để nạp giao diện, ánh xạ các thành phần giao diện và xử lý các thao tác ban đầu.
+
+Ví dụ:
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+}
+6. setContentView dùng để làm gì?
+
+setContentView() dùng để gắn file giao diện XML với Activity Java.
+
+Ví dụ:
+
+setContentView(R.layout.activity_main);
+
+Dòng này có nghĩa là Activity sẽ sử dụng giao diện được thiết kế trong file activity_main.xml.
+
+7. Java được dùng để làm gì trong Android Studio?
+
+Trong Android Studio, Java được dùng để viết logic xử lý cho ứng dụng. Ví dụ:
+
+Xử lý sự kiện bấm nút.
+Chuyển màn hình bằng Intent.
+Tính toán dữ liệu.
+Đọc file trong Assets.
+Gửi API.
+Mở WebView.
+8. App cần kiểm tra quyền để làm gì?
+
+App cần kiểm tra quyền để đảm bảo người dùng đã cấp quyền trước khi sử dụng các chức năng nhạy cảm như Camera, vị trí hoặc bộ nhớ.
+
+Ví dụ kiểm tra quyền Camera:
+
+if (checkSelfPermission(android.Manifest.permission.CAMERA)
+        != PackageManager.PERMISSION_GRANTED) {
+    requestPermissions(
+            new String[]{android.Manifest.permission.CAMERA},
+            100
+    );
+}
+
+Ý nghĩa: nếu app chưa có quyền Camera thì app sẽ xin quyền từ người dùng.
+
+9. Giao diện Android được đặt ở đâu?
+
+Giao diện Android thường được đặt trong thư mục:
+
+res/layout
+
+Ví dụ:
+
+activity_main.xml
+activity_toan.xml
+activity_web.xml
+
+Mỗi file XML thường tương ứng với một màn hình trong app.
+
+10. File XML trong res/layout dùng để làm gì?
+
+File XML dùng để mô tả giao diện của ứng dụng. Trong XML có thể khai báo các thành phần như:
+
+TextView
+Button
+EditText
+WebView
+LinearLayout
+ScrollView
+
+Ví dụ:
+
+<Button
+    android:id="@+id/btnToan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Mở màn hình giải toán" />
+11. UI Design Review là gì?
+
+Trả lời:
+
+UI Design Review là phần xem trước giao diện trong Android Studio. Khi mở file XML, có thể chọn Design hoặc Split để xem giao diện ứng dụng hiển thị như thế nào trên điện thoại.
+
+Phần này giúp kiểm tra bố cục, màu sắc, kích thước và vị trí các thành phần trước khi chạy app.
+
+12. Hardcode là gì?
+
+Hardcode là việc viết trực tiếp nội dung vào code hoặc file XML.
+
+Ví dụ:
+
+android:text="Mở màn hình giải toán"
+
+Cách này chạy được nhưng không tốt nếu app cần hỗ trợ nhiều ngôn ngữ hoặc cần quản lý nội dung tập trung.
+
+13. Cách tránh hardcode trong Android là gì?
+
+Để tránh hardcode, nên lưu nội dung text vào file:
+
+res/values/strings.xml
+
+Ví dụ trong strings.xml:
+
+<string name="open_toan">Mở màn hình giải toán</string>
+
+Trong XML tham chiếu bằng:
+
+android:text="@string/open_toan"
+14. Cú pháp tham chiếu tài nguyên trong Android là gì?
+
+Cú pháp tham chiếu tài nguyên trong XML là:
+
+@loại_tài_nguyên/tên_tài_nguyên
+
+Ví dụ:
+
+android:text="@string/app_name"
+
+Trong Java có thể lấy bằng:
+
+getString(R.string.app_name);
+15. Ưu điểm của việc tham chiếu tài nguyên là gì?
+
+Việc tham chiếu tài nguyên có các ưu điểm:
+
+Dễ quản lý nội dung.
+Dễ chỉnh sửa.
+Tránh lặp lại text nhiều lần.
+Hỗ trợ đa ngôn ngữ.
+Hỗ trợ theme sáng/tối.
+Giúp app chuyên nghiệp hơn.
+16. Android hỗ trợ tự động theo LOCATION, LANGUAGE, THEME như thế nào?
+
+Android có thể tự động lấy tài nguyên phù hợp theo ngôn ngữ, khu vực và giao diện người dùng.
+
+Ví dụ:
+
+res/values/strings.xml
+res/values-en/strings.xml
+
+Nếu máy dùng tiếng Việt thì app lấy nội dung trong values. Nếu máy dùng tiếng Anh thì app có thể lấy nội dung trong values-en.
+
+Điều này giúp app dễ hỗ trợ nhiều ngôn ngữ và nhiều nhóm người dùng khác nhau.
+
+17. Đối tượng chứa trong Android là gì?
+
+Đối tượng chứa là layout dùng để chứa các thành phần con và sắp xếp chúng theo một quy luật nhất định.
+
+Ví dụ:
+
+<LinearLayout>
+    <TextView />
+    <Button />
+</LinearLayout>
+18. LinearLayout dùng để làm gì?
+
+LinearLayout dùng để sắp xếp các thành phần con theo chiều dọc hoặc chiều ngang.
+
+Sắp xếp theo chiều dọc:
+
+android:orientation="vertical"
+
+Sắp xếp theo chiều ngang:
+
+android:orientation="horizontal"
+19. Gravity dùng để làm gì?
+
+gravity dùng để căn chỉnh nội dung bên trong layout hoặc bên trong một thành phần giao diện.
+
+Ví dụ căn giữa theo chiều ngang:
+
+android:gravity="center_horizontal"
+20. Code Java tương tác với layout như thế nào?
+
+Muốn Java tương tác với layout, cần đặt id cho đối tượng trong XML, sau đó dùng findViewById() để ánh xạ sang Java.
+
+Ví dụ XML:
+
+<TextView
+    android:id="@+id/txtKq"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+TextView txtKq = findViewById(R.id.txtKq);
+txtKq.setText("Kết quả");
+
+21. Muốn text phù hợp với ngôn ngữ người dùng thì làm thế nào?
+
+Không nên viết text trực tiếp trong Java hoặc XML. Nên lưu text trong strings.xml, sau đó tham chiếu bằng @string/....
+
+Ví dụ:
+
+android:text="@string/ket_qua"
+
+Trong Java:
+
+txtKq.setText(getString(R.string.ket_qua));
+
+Nhờ vậy Android có thể tự chọn text phù hợp theo ngôn ngữ của thiết bị.
+
+22. Event trong Android là gì?
+
+Event là sự kiện xảy ra khi người dùng tác động vào ứng dụng, ví dụ:
+
+Click vào Button.
+Click vào TextView.
+Nhập dữ liệu vào EditText.
+Chọn một mục trong danh sách.
+23. Layout cần làm gì để code xử lý event?
+
+Layout cần đặt id cho đối tượng cần xử lý sự kiện.
+
+Ví dụ:
+
+<Button
+    android:id="@+id/btnTinh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tính tổng" />
+
+Sau đó trong Java dùng:
+
+Button btnTinh = findViewById(R.id.btnTinh);
+24. Code xử lý sự kiện click viết như thế nào? Cách 1
+
+Cách 1 là dùng lambda:
+
+btnTinh.setOnClickListener(v -> {
+    txtKq.setText("Đã bấm nút tính");
+});
+
+Cách này ngắn gọn, dễ đọc và được sử dụng trong bài thực hành.
+
+25. Code xử lý sự kiện click viết như thế nào? Cách 2
+
+Cách 2 là dùng View.OnClickListener:
+
+btnTinh.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        txtKq.setText("Đã bấm nút tính");
+    }
+});
+
+Cách này dài hơn nhưng dễ hiểu với người mới học vì thể hiện rõ hàm onClick.
+
+26. Assets trong Android là gì?
+
+Assets là thư mục đặc biệt dùng để lưu các file dữ liệu đi kèm với ứng dụng. Các file này có thể là:
+
+.txt
+.html
+.json
+ảnh
+âm thanh
+dữ liệu offline
+27. Khi copy file vào Assets thì chuyện gì xảy ra?
+
+Khi copy file vào thư mục assets, các file này sẽ được đóng gói cùng ứng dụng khi biên dịch. Khi cài app lên điện thoại, file vẫn nằm trong app và có thể được truy cập bằng code.
+
+28. Cú pháp đọc file trong Assets là gì?
+
+Cú pháp đọc file trong Assets:
+
+InputStream inputStream = getAssets().open("dan_toc_viet_nam.txt");
+
+Sau đó có thể dùng BufferedReader để đọc từng dòng:
+
+BufferedReader reader = new BufferedReader(
+        new InputStreamReader(inputStream)
+);
+29. Lợi ích của việc app có sẵn file trong Assets là gì?
+
+Lợi ích của Assets là:
+
+App có thể hoạt động offline.
+Không phụ thuộc Internet.
+Dữ liệu đi kèm app.
+Tốc độ đọc nhanh.
+Phù hợp với app hướng dẫn, tài liệu học tập, từ điển nhỏ.
+30. Ứng dụng Assets trong bài là gì?
+
+Trong bài, em xây dựng ứng dụng đọc dữ liệu offline từ Assets. App có hai mục nội dung:
+
+Đặc điểm dân tộc Việt Nam
+Chủ quyền biển đảo Việt Nam
+
+Mỗi mục được lưu trong một file .txt riêng trong thư mục assets.
+
+31. Dữ liệu trong Assets có đặc thù gì?
+
+Dữ liệu trong bài là dữ liệu văn bản nhiều dòng, có tiêu đề, các ý chính và phần kết luận. Dữ liệu không cần xử lý phức tạp mà chỉ cần đọc và hiển thị.
+
+32. Dùng thuật toán nào để xử lý dữ liệu Assets?
+
+Thuật toán xử lý là đọc tuần tự từng dòng trong file bằng BufferedReader, sau đó dùng StringBuilder để ghép các dòng lại thành một chuỗi hoàn chỉnh.
+
+Quy trình:
+
+Mở file trong Assets
+Đọc từng dòng
+Ghép nội dung bằng StringBuilder
+Hiển thị lên TextView
+33. Dùng đối tượng nào để hiển thị dữ liệu Assets?
+
+Dữ liệu được hiển thị bằng TextView. Vì nội dung dài nên đặt TextView bên trong ScrollView để người dùng có thể cuộn xem toàn bộ nội dung.
+
+Ví dụ:
+
+<ScrollView>
+    <TextView
+        android:id="@+id/txtNoiDung" />
+</ScrollView>
+34. Kết quả đạt được của app Android Studio là gì?
+
+Sau khi hoàn thành, ứng dụng có các chức năng:
+
+Hiển thị màn hình giới thiệu sinh viên.
+Chuyển sang màn hình giải toán.
+Tính tổng hai số.
+Gửi dữ liệu bài toán lên API.
+Mở WebView hiển thị website.
+Đọc dữ liệu offline từ thư mục Assets.
+Hiển thị nội dung bằng TextView và ScrollView.
 ==> tạo app1 sử dụng cơ chế Dữ liệu chuẩn bị trước trong Assets
-         format dữ liệu: tuỳ ý, nội dung tuỳ ý
-         công cụ để hiển thị dữ liệu: tuỳ ý
+format dữ liệu: tuỳ ý, nội dung tuỳ ý
+         
+   công cụ để hiển thị dữ liệu: tuỳ ý
          có cần phải tiền xử lý trước khi hiển thị ko: tuỳ ý.
          SV TỰ ĐẶT RA VẤN ĐỀ => TỰ GIẢI QUYẾT VẤN ĐỀ
          MÔ TẢ ĐƯỢC DỮ LIỆU CÓ ĐẶC THÙ GÌ
